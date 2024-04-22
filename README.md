@@ -83,11 +83,11 @@ mkgifs('njbw_results/results_velocity/ve','other/demkk.tif',2,[-1.5 1.5],'ve.gif
 ```m
 mkfigure_v('njbw_results/vn_mask.tif','njbw_results/ve_mask.tif','njbw_results/vu_mask.tif','other/demkk.tif',2,10,10,'other/njbw.shp'); 
 ```
-##### (9) Draw a vector arrow profile. Interactive selection of the profile to be drawn, supporting a straight line. The first three parameters represent the solving tif in the north, east, and vertical directions, respectively. Parameter 4: The DEM of the region needs to be consistent with the deformation range.
+##### (9) Draw a vector arrow profile. Interactive selection of the profile to be drawn, supporting a straight line. The first three parameters represent the solving tif in the north, east, and vertical directions, respectively. Parameter 4: The DEM of the region needs to be consistent with the deformation range. parameter 5: arrow scale.
 ```m
 mksec('njbw_results/vn_mask.tif','njbw_results/ve_mask.tif','njbw_results/vu_mask.tif','other/demkk.tif',0.05); 
 ```
-##### (10) Draw a timing chart. Interactive selection of points and drawing of their long-term cumulative deformation map.Parameter 1: results; Parameter 2: time.
+##### (10) Draw a point timing chart. Interactive selection of points and drawing of their long-term cumulative deformation map.Parameter 1: results; Parameter 2: time.
 ```m
 mkpt('njbw_results/myFile_out',obj_arvin.date.time)
 ```
