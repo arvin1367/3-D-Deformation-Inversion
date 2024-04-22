@@ -56,7 +56,7 @@ myDEMdiff('other/njbw_dem.tif','njbw/ascending_range/20221004_20221016r.tif')
 ```m
 dirc='njbw';
 ```
-##### (3) Start data preprocessing by entering the name of the parent folder. If you do not have a local incidence angle file, you can enter the incidence angle of ascending in the second parameter, the azimuth of ascending in the third parameter, the incidence angle of descending in the fourth parameter, and the azimuth of descending in the fifth parameter.     eg. obj_arvin=myPreprocess_3dglacier(dirc,36.9156,347.2974,37.8561,192.6945);POT InSAR
+##### (3) Start data preprocessing by entering the name of the parent folder. If you do not have a local incidence angle file, you can enter the incidence angle of ascending in the second parameter, the azimuth of ascending in the third parameter, the incidence angle of descending in the fourth parameter, and the azimuth of descending in the fifth parameter.     eg. obj_arvin=myPreprocess_3dglacier(dirc,'POT',36.9156,347.2974,37.8561,192.6945);POT InSAR
 ```m
 obj_arvin=myPreprocess(dirc,'POT'); 
 save('obj_arvin.mat');
