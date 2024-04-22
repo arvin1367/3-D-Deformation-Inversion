@@ -71,11 +71,11 @@ save('obj_data.mat');
 obj_un=myReprocess(obj_arvin,obj_data); 
 save('obj_un.mat');
 ```
-##### (6) Draw deformation maps in various directions, parameter 1: calculated tif; parameter 2: DEM of the area, which needs to be consistent with the deformation range. If not, you can use 'no' instead; parameter 3: scale factor, set according to the user's drawing range; parameter 4: select input, if any, it is the line shp file of the deformation contour, such as the glacier range.
+##### (6) Draw deformation maps in various directions, parameter 1: Preprocessed struct; parameter 2: calculated tif; parameter 3: DEM of the area, which needs to be consistent with the deformation range. If not, you can use 'no' instead; parameter 4: scale factor, set according to the user's drawing range; parameter 5: select input, if any, it is the line shp file of the deformation contour, such as the glacier range.
 ```m
 mkfigure(obj_arvin,'dem_t1_01/vu.tif','other/demkk.tif',2,'other/njbw.shp'); 
 ```
-##### (7) Draw dynamic deformation maps in various directions, parameter 1: calculated tif, rate between each time period; parameter 2: DEM of the area, which needs to be consistent with the deformation range, If not, you can use 'no' instead; parameter 3: scale factor, set according to the user's drawing range; parameter 4: color bar range, set according to the deformation size, parameter 5: select input, and some are the deformation contour line shp files, such as glacier range.
+##### (7) Draw dynamic deformation maps in various directions, parameter 1: calculated tif, rate between each time period; parameter 2: DEM of the area, which needs to be consistent with the deformation range, If not, you can use 'no' instead; parameter 3: scale factor, set according to the user's drawing range; parameter 4: color bar range, set according to the deformation size, parameter 5: output the name of the gif; parameter 6: select input, and some are the deformation contour line shp files, such as glacier range.
 ```m
 mkgifs('njbw_results/results_velocity/ve','other/demkk.tif',2,[-1.5 1.5],'ve.gif','other/njbw.shp'); 
 ```
