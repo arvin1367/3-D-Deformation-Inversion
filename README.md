@@ -61,7 +61,7 @@ dirc='njbw';
 obj_arvin=myPreprocess(dirc,'POT'); 
 save('obj_arvin.mat');
 ```
-##### (4) To start 3D inversion, input data preprocessing is required for the structure. Including two methods for solving ill conditioned equations: Tikhonov and TSVD.For Tikhonov: obj_data=myProcessr(obj_arvin,'Tikhonov',0.1,1);The second parameter is the regularization parameter, recommended 0.1 (large deformation, e.g. glacier), and the third parameter is the regularization order, usually 0, 1, 2 (recommended 1). For TSVD: obj_data=myProcess(obj_arvin,'TSVD',0.5);The second parameter is the singular value truncation value, recommended 0.5 (large deformation, e.g. glacier).
+##### (4) To start 3D inversion, input data preprocessing is required for the structure. Including two methods for solving ill conditioned equations: Tikhonov and TSVD.For Tikhonov: obj_data=myProcess(obj_arvin,'Tikhonov',0.1,1);The second parameter is the regularization parameter, recommended 0.1 (large deformation, e.g. glacier), and the third parameter is the regularization order, usually 0, 1, 2 (recommended 1). For TSVD: obj_data=myProcess(obj_arvin,'TSVD',0.5);The second parameter is the singular value truncation value, recommended 0.5 (large deformation, e.g. glacier).
 ```m
 obj_data=myProcess(obj_arvin,'TSVD',0.5); 
 save('obj_data.mat');
@@ -73,7 +73,7 @@ save('obj_un.mat');
 ```
 ##### (6) Draw deformation maps in various directions, parameter 1: Preprocessed struct; parameter 2: calculated tif; parameter 3: DEM of the area, which needs to be consistent with the deformation range. If not, you can use 'no' instead; parameter 4: scale factor, set according to the user's drawing range; parameter 5: select input, if any, it is the line shp file of the deformation contour, such as the glacier range.
 ```m
-mkfigure(obj_arvin,'dem_t1_01/vu.tif','other/demkk.tif',2,'other/njbw.shp'); 
+mkfigure(obj_arvin,'dem_t1_05/vu.tif','other/demkk.tif',2,'other/njbw.shp'); 
 ```
 ##### (7) Draw dynamic deformation maps in various directions, parameter 1: calculated tif, rate between each time period; parameter 2: DEM of the area, which needs to be consistent with the deformation range, If not, you can use 'no' instead; parameter 3: scale factor, set according to the user's drawing range; parameter 4: color bar range, set according to the deformation size, parameter 5: output the name of the gif; parameter 6: select input, and some are the deformation contour line shp files, such as glacier range.
 ```m
