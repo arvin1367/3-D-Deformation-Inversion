@@ -1,6 +1,6 @@
 # 3-D-Deformation-Inversion
 <img width="416" alt="image" src="[https://github.com/arvin1367/3-D-Deformation-Inversion/assets/49364261/5d3bd8bd-1613-4d0a-ad6c-36321716a209]">
-
+![image](https://github.com/arvin1367/3-D-Deformation-Inversion/blob/3DDI/dem.png)
 
 ## What is this repository for?
 
