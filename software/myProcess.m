@@ -84,7 +84,8 @@ classdef myProcess
                         if obj.method==0
                             b=make_b(obj,preobj,a,i,j); %b is deformation data pairs
                             A=make_A(obj,preobj,i,j); %A is time coefficient matrix
-                            temp=pinv(A)*b; %SVD
+%                             temp=pinv(A)*b; %SVD
+                            temp=lsqminnorm(A,b);
                         elseif obj.method==1
                             b=make_b(obj,preobj,a,i,j); %b is deformation data pairs
                             A=make_A(obj,preobj,i,j); %A is time coefficient matrix
@@ -367,8 +368,8 @@ classdef myProcess
                 if isfolder(preobj.strsup)==1
                     for k=obj.aspect.a*2+1+obj.aspect.d*2:obj.aspect.d*2+obj.aspect.a*2+obj.aspect.spf
                         q=k-obj.aspect.a*2-obj.aspect.d*2;
-                        A(k,3*(q-1)+1)=ddew(i,j);
-                        A(k,3*(q-1)+2)=ddns(i,j);
+                        A(k,3*(q-1)+1)=ddns(i,j);
+                        A(k,3*(q-1)+2)=ddew(i,j);
                         A(k,3*(q-1)+3)=-1;
                         clear q
                     end
@@ -467,8 +468,8 @@ classdef myProcess
                 if isfolder(preobj.strsup)==1
                     for k=obj.aspect.a+1+obj.aspect.d:obj.aspect.d+obj.aspect.a+obj.aspect.spf
                         q=k-obj.aspect.a-obj.aspect.d;
-                        A(k,3*(q-1)+1)=ddew(i,j);
-                        A(k,3*(q-1)+2)=ddns(i,j);
+                        A(k,3*(q-1)+1)=ddns(i,j);
+                        A(k,3*(q-1)+2)=ddew(i,j);
                         A(k,3*(q-1)+3)=-1;
                         clear q
                     end
