@@ -3,7 +3,7 @@
 
 ## What is this repository for?
 
-A MATLAB toolbox for automatically calculating SAR-derived 3-D deformation maps of glacier, landslide, and land subsidence. Please cite this paper（https://doi.org/10.1016/j.envsoft.2024.106074）where the toolbox was proposed. 
+A MATLAB toolbox for automatically calculating SAR-derived 3-D deformation maps of glacier, landslide, and land subsidence. Please cite this paper where the toolbox was proposed. https://doi.org/10.1016/j.envsoft.2024.106074
 
 
 ## How do I get set up?
