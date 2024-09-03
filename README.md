@@ -1,6 +1,10 @@
 # 3-D-Deformation-Inversion
 <img width="416" alt="image" src="https://github.com/arvin1367/3-D-Deformation-Inversion/blob/3DDI/dem.png">
 
+## update
+We have updated the APF constraints used for the 3D solution of landslides. for example：
+obj_arvin=myPreprocess(dirc,'insar','apf'); or obj_arvin=myPreprocess(dirc,'insar','spf');
+
 ## What is this repository for?
 
 A MATLAB toolbox for automatically calculating SAR-derived 3-D deformation maps of glacier, landslide, and land subsidence. Please cite this paper where the toolbox was proposed. https://doi.org/10.1016/j.envsoft.2024.106074
