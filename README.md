@@ -2,7 +2,7 @@
 <img width="416" alt="image" src="https://github.com/arvin1367/3-D-Deformation-Inversion/blob/3DDI/dem.png">
 
 ## update
-We have updated the APF constraints used for the 3D solution of landslides. for example：
+We have updated the APF constraints used for the 3D solution of landslides. Under the constraint of APF, it is necessary to input a aspect file to supporting_documents.for example：
 obj_arvin=myPreprocess(dirc,'insar','apf'); or obj_arvin=myPreprocess(dirc,'insar','spf');
 
 ## What is this repository for?
