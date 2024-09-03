@@ -73,7 +73,7 @@ save('obj_un.mat');
 ```
 ##### (6) Draw deformation maps in various directions, parameter 1: Preprocessed struct; parameter 2: calculated tif; parameter 3: DEM of the area, which needs to be consistent with the deformation range. If not, you can use 'no' instead; parameter 4: scale factor, set according to the user's drawing range; parameter 5: select input, if any, it is the line shp file of the deformation contour, such as the glacier range.
 ```m
-mkfigure(obj_arvin,'dem_t1_05/vu.tif','other/demkk.tif',2,'other/njbw.shp'); 
+mkfigure(obj_arvin,'ve_ave_year.tif','other/demkk.tif',2,'other/njbw.shp'); 
 ```
 ##### (7) Draw dynamic deformation maps in various directions, parameter 1: calculated tif, rate between each time period; parameter 2: DEM of the area, which needs to be consistent with the deformation range, If not, you can use 'no' instead; parameter 3: scale factor, set according to the user's drawing range; parameter 4: color bar range, set according to the deformation size, parameter 5: output the name of the gif; parameter 6: select input, and some are the deformation contour line shp files, such as glacier range.
 ```m
@@ -81,11 +81,11 @@ mkgifs('njbw_results/results_velocity/ve','other/demkk.tif',2,[-1.5 1.5],'ve.gif
 ```
 ##### (8) Draw a deformation rate map with vector arrows, with the base color representing the upper and lower shape variables, and the arrow length representing the horizontal shape variables. The first three parameters represent the solving tif in the north, east, and vertical directions, respectively. Parameter 4: DEM of the area, which needs to be consistent with the deformation range, If not, you can use 'no' instead. Parameter 5: Scale factor, set according to the user's drawing range. Parameter 6: Vector arrows use spacing, reflecting arrow density. Parameter 7: Arrow scaling factor. Parameter 8: Select input. If there are any, it will be the line shp file of the deformation contour, such as the glacier range.
 ```m
-mkfigure_v('njbw_results/vn_mask.tif','njbw_results/ve_mask.tif','njbw_results/vu_mask.tif','other/demkk.tif',2,10,10,'other/njbw.shp'); 
+mkfigure_v('njbw_results/vn_ave_year.tif','njbw_results/ve_ave_year.tif','njbw_results/vu_ave_year.tif','other/demkk.tif',2,10,10,'other/njbw.shp'); 
 ```
 ##### (9) Draw a vector arrow profile. Interactive selection of the profile to be drawn, supporting a straight line. The first three parameters represent the solving tif in the north, east, and vertical directions, respectively. Parameter 4: The DEM of the region needs to be consistent with the deformation range. parameter 5: arrow scale.
 ```m
-mksec('njbw_results/vn_mask.tif','njbw_results/ve_mask.tif','njbw_results/vu_mask.tif','other/demkk.tif',0.05); 
+mksec('njbw_results/vn_ave_year.tif','njbw_results/ve_ave_year.tif','njbw_results/vu_ave_year.tif','other/demkk.tif',0.05); 
 ```
 ##### (10) Draw a point timing chart. Interactive selection of points and drawing of their long-term cumulative deformation map.Parameter 1: results; Parameter 2: time.
 ```m
